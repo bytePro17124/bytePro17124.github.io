@@ -16,6 +16,8 @@ Summer 2018 - I am in Athens, Ohio working on a Genetic Algorithm for Hua Labs a
 
 Resume: 
 
-Social Media: [![matt early twitter](hostedfiles/icons/Twitter_Social_Icon_Rounded_Square_Color.svg =50x50)](https://twitter.com/matthewjayearly)
+Social Media: 
+<a href="https://twitter.com/matthewjayearly"><img src="hostedfiles/icons/Twitter_Social_Icon_Rounded_Square_Color.svg" alt="alt text" width="25" height="25"></a> 
+<a href="https://www.facebook.com/matthew.early.750"><img src="hostedfiles/icons/f-ogo_RGB_HEX-58.svg" alt="alt text" width="25" height="25"></a> 
 
 Blog: 
