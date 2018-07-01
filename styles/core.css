@@ -24,3 +24,9 @@ body {
   color: rgb(38, 165, 38);
   font-size: 110%;
 }
+
+h1, h2, h3, h4, h5 {
+  font-size: 120%;
+  color: rgb(43, 195, 43);
+  text-shadow: darkgreen;
+}
