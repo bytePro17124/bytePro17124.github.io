@@ -20,5 +20,7 @@ time, mark, audio, video {
 } */
 
 body {
-  background-color: grey;
+  background-color: black;
+  color: rgb(38, 165, 38);
+  font-size: 110%;
 }
