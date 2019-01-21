@@ -38,6 +38,7 @@ body {
 }
 
 p {
+  padding: 10px;
   background-color: #32273f;
   text-decoration: #60666B;
   text-indent: 20px;
