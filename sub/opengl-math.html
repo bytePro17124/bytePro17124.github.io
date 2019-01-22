@@ -8,51 +8,83 @@
 </head>
 
 
-  <h1>OpenGL Math</h1>
-  
-  <em> ysk - this is a work in progress</em>
+<h1>OpenGL Math</h1>
 
-  <h2>Normal textures</h2>
+<h2>Normal textures</h2>
+
 <p>
-A “normal texture” looks like this :</p>
-  <img src="../hostedfiles/images/orth_example.png" alt="example" width="500" height="350">
+  A “normal texture” looks like this :</p>
+<img src="../hostedfiles\images\normal-texture-example.png" alt="example" width="350" height="350">
+
 <p>
-In each RGB texel is encoded a XYZ vector : each colour component is between 0 and 1, and each vector component is between -1 and 1, so this simple mapping goes from the texel to the normal :
+  In each RGB texel is encoded a XYZ vector : each colour component is between 0 and 1, and each vector component is
+  between -1 and 1, so this simple mapping goes from the texel to the normal :
 </p>
 <p>
-normal = (2*color)-1 // on each component
-</p><p>
-The texture has a general blue tone because overall, the normal is towards the “outside of the surface”. As usual, X is right in the plane of the texture, Y is up (again in the plane of the texture), thus given the right hand rule Z point to the “outside” of the plane of the texture.
-</p><p>
-This texture is mapped just like the diffuse one; the big problem is how to convert our normal, which is expressed in the space each individual triangle (tangent space, also called image space), in model space (since this is what is used in our shading equation).
+  normal = (2*color)-1 // on each component
+</p>
+<p>
+  The texture has a general blue tone because overall, the normal is towards the “outside of the surface”. As usual, X
+  is right in the plane of the texture, Y is up (again in the plane of the texture), thus given the right hand rule Z
+  point to the “outside” of the plane of the texture.
+</p>
+<p>
+  This texture is mapped just like the diffuse one; the big problem is how to convert our normal, which is expressed in
+  the space each individual triangle (tangent space, also called image space), in model space (since this is what is
+  used in our shading equation).
 
 </p>
+<h6>src: <a href="http://www.opengl-tutorial.org/intermediate-tutorials/tutorial-13-normal-mapping/#normal-textures"
+    target="_blank"><em>http://www.opengl-tutorial.org/intermediate-tutorials/tutorial-13-normal-mapping/#normal-textures</em></a>
+</h6>
 
-src: <em>http://www.opengl-tutorial.org/intermediate-tutorials/tutorial-13-normal-mapping/#normal-textures</em>
-
+<div>-</div>
 
 <h2>What are normal, tangent and binormal vectors and how are they used?</h2>
+
 <p>
-Generally speaking, a Normal vector represents the direction pointing directly "out" from a surface, meaning it is orthogonal (at 90 degree angles to) any vector which is coplanar with (in the case of a flat surface) or tangent to (in the case of a non-flat surface) the surface at a given point.
-<p>
-A Tangent vector is typically regarded as one vector that exists within the surface's plane (for a flat surface) or which lies tangent to a reference point on a curved surface (ie. if a flat plane were constructed with the same normal from the reference point, the tangent vector would be coplanar with that plane).
-<p>
-The concept of a Binormal vector is a bit more complex; in computer graphics, it generally refers to a Bitangent vector (reference here), which is effectively the "other" tangent vector for the surface, which is orthogonal to both the Normal vector and the chosen Tangent vector.Normal, Tangent, Bitangent
-<p>
-With regards to how they are computed, this varies depending on the complexity of the surface and how precise you want the normal to be (in some cases, such as with smooth shaders, it is more desirable to calculate a normal for an approximated surface, when the actual information for a surface is not present), but there are several generalized formulas given here.
-<p>
-In terms of where they occur, the answer is EVERYWHERE. Normal vectors are used to position cameras and objects in 3D space, to determine trajectories, reflections, and angles in physics calculations, to map skins and textures to 3D models, to determine aim trajectory offsets in AI programming, to give hints to shaders about how to light, shade, and color points on a surface relative to lights, the camera, and other objects, and so on. They are possibly one of the most useful pieces of information to have in a 3D environment, and they even come in extremely handy in 2D as well.
+  Generally speaking, a Normal vector represents the direction pointing directly "out" from a surface, meaning it is
+  orthogonal (at 90 degree angles to) any vector which is coplanar with (in the case of a flat surface) or tangent to
+  (in the case of a non-flat surface) the surface at a given point.
 </p>
-src: 
-<em>
-answered Mar 20 '13 at 15:01
-Shotgun Ninja @ gamedev stack exchange
-1,087913
-</em>
-  
-  <div>-</div>
-  <div>-</div>
-  <div>-</div>
+
+<p>
+  A Tangent vector is typically regarded as one vector that exists within the surface's plane (for a flat surface) or
+  which lies tangent to a reference point on a curved surface (ie. if a flat plane were constructed with the same
+  normal from the reference point, the tangent vector would be coplanar with that plane).</p>
+<p>
+  The concept of a Binormal vector is a bit more complex; in computer graphics, it generally refers to a Bitangent
+  vector (reference here), which is effectively the "other" tangent vector for the surface, which is orthogonal to
+  both the Normal vector and the chosen Tangent vector.</p>
+Normal, Tangent, Bitangent<br>
+<img src="../hostedfiles/images/orth_example.png" alt="example" width="500" height="350">
+
+<p>
+  With regards to how they are computed, this varies depending on the complexity of the surface and how precise you
+  want the normal to be (in some cases, such as with smooth shaders, it is more desirable to calculate a normal for
+  an approximated surface, when the actual information for a surface is not present), but there are several
+  generalized formulas given <a href="http://en.wikipedia.org/wiki/Normal_%28geometry%29#Calculating_a_surface_normal"
+    target="_blank">here</a>.
+</p>
+<p>
+  In terms of where they occur, the answer is EVERYWHERE. Normal vectors are used to position cameras and objects
+  in 3D space, to determine trajectories, reflections, and angles in physics calculations, to map skins and
+  textures to 3D models, to determine aim trajectory offsets in AI programming, to give hints to shaders about
+  how to light, shade, and color points on a surface relative to lights, the camera, and other objects, and so
+  on. They are possibly one of the most useful pieces of information to have in a 3D environment, and they even
+  come in extremely handy in 2D as well.
+</p>
+<h6>src:
+  <em>
+    answered Mar 20 '13 at 15:01
+    Shotgun Ninja @ gamedev stack exchange
+  </em></h6>
+
+<div>-</div>
+
+<ul>
+  <li><a href="../index.html">Home</a></li>
+</ul>
 
 
 </body>
