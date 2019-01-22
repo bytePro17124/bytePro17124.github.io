@@ -68,3 +68,7 @@ li {
 div#profile-pic img {
   border: 2px solid #C2C6C8;
 }
+
+a {
+  color: teal;
+}
