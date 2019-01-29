@@ -1,4 +1,4 @@
-/* html, body, div, span, applet, object, iframe,
+html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -17,67 +17,88 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-} */
-
-/*
-  color1: #081818;
-  color2: #60666B;
-  color3: #C2C6C8;
-  color4: #0F528E;
-  color5: #17A68D;
-  */
-
+}
 
 body {
   background-color: #081818;
   color: #C2C6C8;
-  font-size: 110%;
+  /* font-size: 110%; */
   margin-left: 3%;
   margin-right: 3%;
   text-shadow: 1px 1px #081818;
 }
 
 p {
-  padding: 10px;
+  font-size: 100%;
+  padding: 4px;
   background-color: #32273f;
   text-decoration: #60666B;
   text-indent: 20px;
+  margin-block-end: 2px;
 }
 
 h1, h2, h3, h4, h5 {
+  padding: 10px;
   font-size: 120%;
-  color: #17A68D;
+  color: rgb(11, 172, 172);
   text-shadow: 1px 1px #081818;
   /* text-align: center; */
 }
 
 h1 {
+  color: rgb(32, 209, 135);
   font-size: 150%;
 }
 
+h6 {
+  margin-bottom: 4px;
+}
+
 li {
-  padding-top: 5px;
-  padding-left: 5px;
-  padding-right:5px;
-  background-color: white;
+  padding-top: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  background-color: rgba(255, 255, 255, 0.863);
   display: inline-block;
-  margin-right: 5px;
+}
+
+ul {
+  margin-bottom: 10px;
 }
 
 .links li {
-  padding-top: 5px;
-  padding-left: 5px;
-  padding-right:5px;
-  outline-style: outset;
+  
+  padding: 6px;
+  outline-style: dotted;
   background-color: black;
   display: inline-block;
   margin-right: 5px;
+  font-size: 120%;
+  font-weight: bold;
+  font-style: italic;
+}
+
+img {
+  size: 100px;
 }
 
 div#profile-pic img {
-  border: 2px solid #C2C6C8;
+  border: 2px inset #C2C6C8;
 }
 
 a {
   color: teal;
+}
+
+em {
+  font-style: italic;
+}
+
+#padding1 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.profile_name h1 {
+  clear: both;
 }
