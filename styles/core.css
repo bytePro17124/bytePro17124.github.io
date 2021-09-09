@@ -17,23 +17,26 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+
 }
 
 body {
-  background-color: #081818;
+  padding: 3%;
+  background-color: #424242;
   color: #C2C6C8;
   /* font-size: 110%; */
-  margin-left: 3%;
-  margin-right: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
   text-shadow: 1px 1px #081818;
 }
 
 p {
   font-size: 100%;
-  padding: 4px;
-  background-color: #32273f;
-  text-decoration: #60666B;
+  padding: 8px;
+  background-color: #17121d;
+  text-decoration: #858686;
   text-indent: 20px;
+  text-shadow: 1px 1px #081818;
 }
 
 h1, h2, h3, h4, h5 {
@@ -45,7 +48,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  color: rgb(32, 209, 135);
+  color:rgb(59, 177, 255);
   font-size: 200%;
 }
 
@@ -57,8 +60,42 @@ li {
   padding-top: 4px;
   padding-left: 6px;
   padding-right: 6px;
-  background-color: rgba(255, 255, 255, 0.863);
   display: inline-block;
+  font-size: 125%;
+  font-style: initial;
+  background-color: rgb(53, 90, 114);
+}
+
+.tab {
+  display: inline-block;
+  overflow: hidden;
+  border: 2px outset #C2C6C8;
+  background-color: rgb(70, 122, 156);
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  background-color: rgb(11, 172, 172);
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  /* border-top: none; */
 }
 
 ul {
@@ -67,7 +104,7 @@ ul {
 
 .links li {
   padding: 6px;
-  outline-style: dotted;
+  outline-style: ridge;
   background-color: black;
   display: inline-block;
   margin-right: 5px;

@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en-US">
+<script src="opentab.js"></script>
 
 <head>
   <meta charset="UTF-8">
@@ -15,11 +16,8 @@
 
   <h1 class="profile_name">Matthew Early</h1>
 
-  <p>
-    <em>father, programmer, computer scientist, engineer, musician, creator</em>
-  </p>
-  <br />
-
+  <p>*this page is under development* </p>
+  <br/>
   <ul>
     <li>
       <a href="mailto:matthewjearly@gmail.com">
@@ -48,13 +46,54 @@
     </li>
   </ul>
 
-  <ul class="links">
-    <li><a href="sub/myprojects.html">My Projects</a></li>
-    <li><a href="sub/bio.html">Bio</a></li>
-  </ul>
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Bio')">Bio</button>
+    <button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
+  </div>
 
+  <div id="Projects" class="tabcontent">
+    <h3>Ancient Archer</h3>
+    <p>A multi-platform 3D engine.</p>
+    <p>Find on <a href="https://github.com/mattearly/AncientArcher" target="_blank">Github</a></p>
+
+    <h3>Component Pouch</h3>
+    <p>An Android app Dungeons & Dragons spells.</p>
+    <p>Find on <a href="https://play.google.com/store/apps/details?id=io.github.mattearly.componentpouch&hl=en_US&gl=US" target="_blank"> Google Play</a></p>
+    
+    <h3>dmpower</h3>
+    <p>A multiplatform terminal based Dungeons & Dragons 5e game assistant.</p>
+    <p>Find on <a href="https://github.com/mattearly/dmpower" target="_blank">Github</a></p>
+  </div>
+
+  <div id="Bio" class="tabcontent">
+    <h4>The Early Years.</h4>
+    <p>
+      I grew up in Ohio, spending a lot of time outdoors, exploring the wilderness, and helping out on our farmland. At
+      an
+      early age (around 5 or so) my brother and I became increasingly interested in electronics and mechanical things.
+      Naturally
+      for two boys, this meant taking apart nearly every toy we owned or acquired, just to see how it worked.
+    </p>
+    <h4>Schooling.</h4>
+    <p>
+      During my younger school years, I developed somewhat of passion for math and the sciences. I discovered I had many
+      interests. Right out of high school, I spent two years at DeVry University studying Electrical Engineering &
+      Computer
+      Science and 4 years at Ohio University where I graduated with a B.S.C.S. in Computer Science, a 4 year bachelor
+      degree.
+    </p>
+    <h4>Professional Work.</h4>
+    <p>
+      During most of my 20's, I worked at IT companies, dabbling in all aspects of computing and technologies. In my
+      30's I
+      began getting more heavily into Computer Science and Programming, and began work in research and software
+      development
+      companies, mainly studying the C++ langauge along with its capabilities and uses.
+    </p>
+  </div>
 
   <div id="padding1"></div>
+
 </body>
 
 </html>
